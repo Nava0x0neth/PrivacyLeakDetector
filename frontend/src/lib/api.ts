@@ -4,10 +4,13 @@ export async function analyzeApk(file: File): Promise<PrivacyReport> {
   const formData = new FormData();
   formData.append("file", file);
 
-  const response = await fetch("/api/analyze", {
-    method: "POST",
-    body: formData,
-  });
+  const response = await fetch(
+    "https://privacyleakdetector.onrender.com/api/analyze",
+    {
+      method: "POST",
+      body: formData,
+    }
+  );
 
   console.log("API STATUS:", response.status);
   console.log(
