@@ -9,11 +9,14 @@ app = FastAPI(
 )
 
 # Configure CORS for Next.js frontend
+# Configure CORS for Next.js frontend
 app.add_middleware(
     CORSMiddleware,
     allow_origins=[
-    "http://localhost:3000",
-    "https://privacy-leak-detector-one.vercel.app"],
+        "http://localhost:3000",
+        "https://privacy-leak-detector-one.vercel.app",
+        "https://privacy-leak-detector-fmsn1mrf7-nav-8131.vercel.app",
+    ],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
